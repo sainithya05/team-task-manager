@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
-const Project = require('../models/Project');
+const Project = require('../models/project');
 const User = require('../models/User');
 
 // Get all projects
