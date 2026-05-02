@@ -1,11 +1,21 @@
-cat > ~/assessmet.fs/team-task-manager/frontend/nixpacks.toml << 'EOF'
-[phases.build]
-cmds = ["npm install", "npm run build"]
-
-[start]
-cmd = "npx serve -s build -l 3000"
-EOF
-cd ~/assessmet.fs/team-task-manager
-git add .
-git commit -m "add nixpacks config for frontend"
-git push
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  }
+}
